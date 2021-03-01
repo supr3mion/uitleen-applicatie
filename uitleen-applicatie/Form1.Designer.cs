@@ -114,6 +114,16 @@ namespace uitleen_applicatie
             this.btnUitlenen.Text = "uitlenen";
             this.btnUitlenen.UseVisualStyleBackColor = true;
             // 
+            // btnUitlenen
+            // 
+            this.btnUitlenen.Location = new System.Drawing.Point(486, 401);
+            this.btnUitlenen.Name = "btnUitlenen";
+            this.btnUitlenen.Size = new System.Drawing.Size(100, 37);
+            this.btnUitlenen.TabIndex = 3;
+            this.btnUitlenen.Text = "Uitlenen";
+            this.btnUitlenen.UseVisualStyleBackColor = true;
+            this.btnUitlenen.Click += new System.EventHandler(this.btnUitlenen_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
