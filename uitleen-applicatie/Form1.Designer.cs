@@ -122,7 +122,6 @@ namespace uitleen_applicatie
             this.btnUitlenen.TabIndex = 3;
             this.btnUitlenen.Text = "Uitlenen";
             this.btnUitlenen.UseVisualStyleBackColor = true;
-            this.btnUitlenen.Click += new System.EventHandler(this.btnUitlenen_Click);
             // 
             // Form1
             // 

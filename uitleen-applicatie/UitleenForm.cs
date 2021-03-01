@@ -18,5 +18,10 @@ namespace uitleen_applicatie
 
             tbOpmerking.Text = opmerking;
         }
+
+        private void UitleenForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
