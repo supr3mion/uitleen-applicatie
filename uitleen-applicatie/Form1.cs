@@ -71,5 +71,65 @@ namespace uitleen_applicatie
                 return false;
             }
         }
+
+        public List<string>[] GetAllDevices()
+        {
+            string sqlQuery = "SELECT * FROM apparaten";
+
+            List<string>[] resultList = new List<string>[5];
+            resultList[0] = new List<string>();
+            resultList[1] = new List<string>();
+            resultList[2] = new List<string>();
+            resultList[3] = new List<string>();
+            resultList[4] = new List<string>();
+
+            if (this.OpenConnection() == true)
+            {
+
+                MySqlCommand cmd = new MySqlCommand(sqlQuery, connection);
+
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    resultList[0].Add(dataReader["Naam"] + "");
+                    resultList[1].Add(dataReader["SerieNummer"] + "");
+                    resultList[2].Add(dataReader["Beschrijving"] + "");
+                    resultList[3].Add(dataReader["Status"] + "");
+                    resultList[4].Add(dataReader["DatumRetour"] + "");
+                }
+
+                dataReader.Close();
+
+                this.CloseConnection();
+
+                return resultList;
+            }
+            else
+            {
+                return resultList;
+            }
+        }
+
+        private void reload_Click(object sender, EventArgs e)
+        {
+            lvDevices.Items.Clear();
+
+            List<string>[] allDevices = GetAllDevices();
+
+            for (int i = 0; i < allDevices[0].Count; i++)
+            {
+                ListViewItem newDeviceItem = new ListViewItem(new string[]
+                {
+                    allDevices[0][i],
+                    allDevices[1][i],
+                    allDevices[2][i],
+                    allDevices[3][i],
+                    allDevices[4][i]
+                });
+
+                lvDevices.Items.Add(newDeviceItem);
+            }
+        }
     }
 }
