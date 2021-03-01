@@ -141,7 +141,7 @@ namespace uitleen_applicatie
         private void lvDevices_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-                string selectedItem = lvDevices.SelectedItems[+1].ToString();
+                string selectedItem = lvDevices.SelectedItems[0].ToString();
                 MessageBox.Show(selectedItem.ToString());
 
         }
