@@ -37,6 +37,7 @@ namespace uitleen_applicatie
             this.DatumRetour = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.add = new System.Windows.Forms.Button();
             this.reload = new System.Windows.Forms.Button();
+            this.btnUitlenen = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lvDevices
@@ -101,12 +102,23 @@ namespace uitleen_applicatie
             this.reload.UseVisualStyleBackColor = true;
             this.reload.Click += new System.EventHandler(this.reload_Click);
             // 
+            // btnUitlenen
+            // 
+            this.btnUitlenen.Location = new System.Drawing.Point(486, 401);
+            this.btnUitlenen.Name = "btnUitlenen";
+            this.btnUitlenen.Size = new System.Drawing.Size(100, 37);
+            this.btnUitlenen.TabIndex = 3;
+            this.btnUitlenen.Text = "Uitlenen";
+            this.btnUitlenen.UseVisualStyleBackColor = true;
+            this.btnUitlenen.Click += new System.EventHandler(this.btnUitlenen_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUitlenen);
             this.Controls.Add(this.reload);
             this.Controls.Add(this.add);
             this.Controls.Add(this.lvDevices);
@@ -127,6 +139,7 @@ namespace uitleen_applicatie
         private System.Windows.Forms.ColumnHeader DatumRetour;
         private System.Windows.Forms.Button add;
         private System.Windows.Forms.Button reload;
+        private System.Windows.Forms.Button btnUitlenen;
     }
 }
 

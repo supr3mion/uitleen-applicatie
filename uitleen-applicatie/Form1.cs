@@ -136,5 +136,14 @@ namespace uitleen_applicatie
         {
 
         }
+
+        private void btnUitlenen_Click(object sender, EventArgs e)
+        {
+
+            UitleenForm uitleenscherm = new UitleenForm(5, "Dit is een opmerking");
+
+            uitleenscherm.ShowDialog();
+
+        }
     }
 }
