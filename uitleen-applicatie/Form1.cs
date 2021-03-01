@@ -76,12 +76,13 @@ namespace uitleen_applicatie
         {
             string sqlQuery = "SELECT * FROM apparaten";
 
-            List<string>[] resultList = new List<string>[5];
+            List<string>[] resultList = new List<string>[6];
             resultList[0] = new List<string>();
             resultList[1] = new List<string>();
             resultList[2] = new List<string>();
             resultList[3] = new List<string>();
             resultList[4] = new List<string>();
+            resultList[5] = new List<string>();
 
             if (this.OpenConnection() == true)
             {
@@ -134,6 +135,14 @@ namespace uitleen_applicatie
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void lvDevices_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+                string selectedItem = lvDevices.SelectedItems[+1].ToString();
+                MessageBox.Show(selectedItem.ToString());
 
         }
     }
