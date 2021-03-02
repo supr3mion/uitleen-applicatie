@@ -33,7 +33,9 @@ namespace uitleen_applicatie
             this.Textlbl = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbCommentaar = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -69,14 +71,34 @@ namespace uitleen_applicatie
             this.textBox3.TabIndex = 5;
             this.textBox3.Text = " Datum van Retour:";
             // 
-            // textBox4
+            // tbCommentaar
             // 
-            this.textBox4.Location = new System.Drawing.Point(251, 159);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(246, 157);
-            this.textBox4.TabIndex = 6;
-            this.textBox4.Text = "                             Commetaar:";
+            this.tbCommentaar.Location = new System.Drawing.Point(251, 159);
+            this.tbCommentaar.Multiline = true;
+            this.tbCommentaar.Name = "tbCommentaar";
+            this.tbCommentaar.Size = new System.Drawing.Size(246, 157);
+            this.tbCommentaar.TabIndex = 6;
+            this.tbCommentaar.Text = "                             Commetaar:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(405, 373);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(277, 373);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // UitleenForm
             // 
@@ -84,14 +106,15 @@ namespace uitleen_applicatie
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.tbCommentaar);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.Textlbl);
             this.Controls.Add(this.textBox1);
             this.Name = "UitleenForm";
             this.Text = "UitleenForm";
-            
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,6 +126,8 @@ namespace uitleen_applicatie
         private System.Windows.Forms.Label Textlbl;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbCommentaar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

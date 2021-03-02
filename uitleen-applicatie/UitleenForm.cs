@@ -102,7 +102,36 @@ namespace uitleen_applicatie
             }
         }
 
-        
+        public void UpdateDevice()
+        {
+
+            string commentaar = tbCommentaar.Text;
+
+            // maken van een UPDATE sql om gegevens te wijzigen.
+            string sqlUpdateQuery = "UPDATE apparaten SET Commentaar = '" + commentaar + "' Where id = " + selectedId;
+
+            // UPDATE tabelnaam
+            // SET Kolomnaam = waarde
+            // Where id = ?
+           
+
+            // openstellen van connectie.
+            if (this.OpenConnection() == true)
+            {
+
+                MySqlCommand cmd = new MySqlCommand(sqlUpdateQuery, connection);
+
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                
+
+                
+                //this.CloseConnection();
+
+                
+            }
+            
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -113,6 +142,16 @@ namespace uitleen_applicatie
         {
             
                
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            UpdateDevice();
         }
     }
 }
