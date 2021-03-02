@@ -1,7 +1,7 @@
 ﻿
 namespace uitleen_applicatie
 {
-    partial class Form1
+    partial class hoofdPagina
     {
         /// <summary>
         /// Required designer variable.
@@ -38,6 +38,7 @@ namespace uitleen_applicatie
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnReload = new System.Windows.Forms.Button();
             this.btnUitlenen = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lvDevices
@@ -114,17 +115,29 @@ namespace uitleen_applicatie
             this.btnUitlenen.UseVisualStyleBackColor = true;
             this.btnUitlenen.Click += new System.EventHandler(this.btnUitlenen_Click);
             // 
-            // Form1
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(325, 401);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(138, 37);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "meer details";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // hoofdPagina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnUitlenen);
             this.Controls.Add(this.btnReload);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lvDevices);
-            this.Name = "Form1";
+            this.Name = "hoofdPagina";
             this.Text = "Form1";
             this.ResumeLayout(false);
 
@@ -141,6 +154,7 @@ namespace uitleen_applicatie
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnReload;
         private System.Windows.Forms.Button btnUitlenen;
+        private System.Windows.Forms.Button button1;
     }
 }
 

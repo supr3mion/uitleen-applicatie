@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace uitleen_applicatie
 {
-    public partial class Form1 : Form
+    public partial class hoofdPagina : Form
     {
         private MySqlConnection connection;
 
-        public Form1()
+        public hoofdPagina()
         {
             InitializeComponent();
 
@@ -148,6 +148,16 @@ namespace uitleen_applicatie
 
             UitleenForm myUitleenForm = new UitleenForm(id);
             myUitleenForm.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string selectedId = lvDevices.SelectedItems[0].SubItems[5].Text;
+            int id = Int32.Parse(selectedId);
+
+
+            Overzicht myOverzicht = new Overzicht(id);
+            myOverzicht.ShowDialog();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace uitleen_applicatie
 {
-    partial class Form2
+    partial class apparatenToevoegen
     {
         /// <summary>
         /// Required designer variable.
