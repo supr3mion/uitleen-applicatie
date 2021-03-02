@@ -14,12 +14,15 @@ namespace uitleen_applicatie
      public partial class UitleenForm : Form
     {
         private MySqlConnection connection;
+        private int selectedId = 0;
 
-        public UitleenForm()
+        public UitleenForm(int id)
         {
             InitializeComponent();
 
             InitializeDatabaseConnection();
+
+            selectedId = id;
         }
 
          private void InitializeDatabaseConnection()
@@ -60,7 +63,7 @@ namespace uitleen_applicatie
         }
          public List<string>[] GetAllDevices()
         {
-            string sqlQuery = "SELECT * FROM apparaten";
+            string sqlQuery = "SELECT * FROM apparaten WHERE ID = " + selectedId;
 
             List<string>[] resultList = new List<string>[6];
             resultList[0] = new List<string>();

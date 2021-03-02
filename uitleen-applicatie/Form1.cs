@@ -13,7 +13,7 @@ namespace uitleen_applicatie
 {
     public partial class Form1 : Form
     {
-        private MySql.Data.MySqlClient.MySqlConnection connection;
+        private MySqlConnection connection;
 
         public Form1()
         {
@@ -113,7 +113,7 @@ namespace uitleen_applicatie
             }
         }
 
-        private void reload_Click(object sender, EventArgs e)
+        private void btnReload_Click(object sender, EventArgs e)
         {
             lvDevices.Items.Clear();
 
@@ -140,12 +140,14 @@ namespace uitleen_applicatie
 
         }
 
-        private void lvDevices_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnUitlenen_Click(object sender, EventArgs e)
         {
+            string selectedId = lvDevices.SelectedItems[0].SubItems[5].Text;
+            int id = Int32.Parse(selectedId);
 
-            string selectedItem = lvDevices.SelectedItems[0].SubItems[5].Text;
-            MessageBox.Show(selectedItem.ToString());
 
+            UitleenForm myUitleenForm = new UitleenForm(id);
+            myUitleenForm.ShowDialog();
         }
     }
 }
