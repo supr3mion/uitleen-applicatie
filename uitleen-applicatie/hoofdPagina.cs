@@ -149,5 +149,15 @@ namespace uitleen_applicatie
             UitleenForm myUitleenForm = new UitleenForm(id);
             myUitleenForm.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string selectedId = lvDevices.SelectedItems[0].SubItems[5].Text;
+            int id = Int32.Parse(selectedId);
+
+
+            Overzicht myOverzicht = new Overzicht(id);
+            myOverzicht.ShowDialog();
+        }
     }
 }
