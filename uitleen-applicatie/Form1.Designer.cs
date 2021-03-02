@@ -56,7 +56,6 @@ namespace uitleen_applicatie
             this.lvDevices.TabIndex = 0;
             this.lvDevices.UseCompatibleStateImageBehavior = false;
             this.lvDevices.View = System.Windows.Forms.View.Details;
-            this.lvDevices.SelectedIndexChanged += new System.EventHandler(this.lvDevices_SelectedIndexChanged);
             // 
             // Naam
             // 
@@ -102,26 +101,18 @@ namespace uitleen_applicatie
             this.btnReload.TabIndex = 2;
             this.btnReload.Text = "Herladen";
             this.btnReload.UseVisualStyleBackColor = true;
-            this.btnReload.Click += new System.EventHandler(this.reload_Click);
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // btnUitlenen
             // 
             this.btnUitlenen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUitlenen.Location = new System.Drawing.Point(422, 401);
-            this.btnUitlenen.Name = "btnUitlenen";
-            this.btnUitlenen.Size = new System.Drawing.Size(180, 37);
-            this.btnUitlenen.TabIndex = 3;
-            this.btnUitlenen.Text = "uitlenen";
-            this.btnUitlenen.UseVisualStyleBackColor = true;
-            // 
-            // btnUitlenen
-            // 
             this.btnUitlenen.Location = new System.Drawing.Point(486, 401);
             this.btnUitlenen.Name = "btnUitlenen";
             this.btnUitlenen.Size = new System.Drawing.Size(100, 37);
             this.btnUitlenen.TabIndex = 3;
             this.btnUitlenen.Text = "Uitlenen";
             this.btnUitlenen.UseVisualStyleBackColor = true;
+            this.btnUitlenen.Click += new System.EventHandler(this.btnUitlenen_Click);
             // 
             // Form1
             // 
@@ -135,7 +126,6 @@ namespace uitleen_applicatie
             this.Controls.Add(this.lvDevices);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }

@@ -98,6 +98,7 @@ namespace uitleen_applicatie
                     resultList[2].Add(dataReader["Beschrijving"] + "");
                     resultList[3].Add(dataReader["Status"] + "");
                     resultList[4].Add(dataReader["DatumRetour"] + "");
+                    resultList[5].Add(dataReader["ID"] + "");
                 }
 
                 dataReader.Close();
@@ -112,7 +113,7 @@ namespace uitleen_applicatie
             }
         }
 
-        private void reload_Click(object sender, EventArgs e)
+        private void btnReload_Click(object sender, EventArgs e)
         {
             lvDevices.Items.Clear();
 
@@ -126,8 +127,9 @@ namespace uitleen_applicatie
                     allDevices[1][i],
                     allDevices[2][i],
                     allDevices[3][i],
-                    allDevices[4][i]
-                });
+                    allDevices[4][i],
+                    allDevices[5][i]
+                }) ;
 
                 lvDevices.Items.Add(newDeviceItem);
             }
@@ -138,12 +140,14 @@ namespace uitleen_applicatie
 
         }
 
-        private void lvDevices_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnUitlenen_Click(object sender, EventArgs e)
         {
-            
-                string selectedItem = lvDevices.SelectedItems[0].ToString();
-                MessageBox.Show(selectedItem.ToString());
+            string selectedId = lvDevices.SelectedItems[0].SubItems[5].Text;
+            int id = Int32.Parse(selectedId);
 
+
+            UitleenForm myUitleenForm = new UitleenForm(id);
+            myUitleenForm.ShowDialog();
         }
     }
 }
