@@ -1,7 +1,7 @@
 ﻿
 namespace uitleen_applicatie
 {
-    partial class Form1
+    partial class hoofdPagina
     {
         /// <summary>
         /// Required designer variable.

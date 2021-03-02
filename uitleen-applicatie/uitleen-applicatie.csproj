@@ -92,17 +92,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="hoofdPagina.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="hoofdPagina.Designer.cs">
+      <DependentUpon>hoofdPagina.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="apparatenToevoegen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="apparatenToevoegen.Designer.cs">
+      <DependentUpon>apparatenToevoegen.cs</DependentUpon>
     </Compile>
     <Compile Include="Overzicht.cs">
       <SubType>Form</SubType>
@@ -124,11 +124,11 @@
     <Compile Include="UitleenForm.Designer.cs">
       <DependentUpon>UitleenForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="hoofdPagina.resx">
+      <DependentUpon>hoofdPagina.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="apparatenToevoegen.resx">
+      <DependentUpon>apparatenToevoegen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Overzicht.resx">
       <DependentUpon>Overzicht.cs</DependentUpon>

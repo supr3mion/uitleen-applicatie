@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace uitleen_applicatie
 {
-    public partial class Form1 : Form
+    public partial class hoofdPagina : Form
     {
         private MySqlConnection connection;
 
-        public Form1()
+        public hoofdPagina()
         {
             InitializeComponent();
 
