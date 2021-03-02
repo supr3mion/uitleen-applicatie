@@ -31,7 +31,7 @@ namespace uitleen_applicatie
         {
             this.mainPannel = new System.Windows.Forms.Panel();
             this.lblNaamApparaat = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             this.lblSerieNummer = new System.Windows.Forms.Label();
             this.lblSerieNummerTag = new System.Windows.Forms.Label();
             this.lblCommentaar = new System.Windows.Forms.Label();
@@ -42,7 +42,7 @@ namespace uitleen_applicatie
             this.lblStatusTag = new System.Windows.Forms.Label();
             this.btnVerwijder = new System.Windows.Forms.Button();
             this.mainPannel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // mainPannel
@@ -57,7 +57,7 @@ namespace uitleen_applicatie
             this.mainPannel.Controls.Add(this.lblCommentaar);
             this.mainPannel.Controls.Add(this.lblSerieNummerTag);
             this.mainPannel.Controls.Add(this.lblSerieNummer);
-            this.mainPannel.Controls.Add(this.pictureBox1);
+            this.mainPannel.Controls.Add(this.pbFoto);
             this.mainPannel.Controls.Add(this.lblNaamApparaat);
             this.mainPannel.Location = new System.Drawing.Point(139, 60);
             this.mainPannel.Name = "mainPannel";
@@ -75,13 +75,13 @@ namespace uitleen_applicatie
             this.lblNaamApparaat.TabIndex = 0;
             this.lblNaamApparaat.Text = "[naam]";
             // 
-            // pictureBox1
+            // pbFoto
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(363, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pbFoto.Location = new System.Drawing.Point(363, 21);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(150, 150);
+            this.pbFoto.TabIndex = 1;
+            this.pbFoto.TabStop = false;
             // 
             // lblSerieNummer
             // 
@@ -93,7 +93,7 @@ namespace uitleen_applicatie
             this.lblSerieNummer.Size = new System.Drawing.Size(144, 16);
             this.lblSerieNummer.TabIndex = 2;
             this.lblSerieNummer.Tag = "";
-            this.lblSerieNummer.Text = "1234567890";
+            this.lblSerieNummer.Text = "[serie nummer]";
             // 
             // lblSerieNummerTag
             // 
@@ -195,9 +195,9 @@ namespace uitleen_applicatie
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.mainPannel);
             this.Name = "Overzicht";
-            this.Text = "Form3";
+            this.Text = "overzicht";
             this.mainPannel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -205,7 +205,7 @@ namespace uitleen_applicatie
         #endregion
 
         private System.Windows.Forms.Panel mainPannel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbFoto;
         private System.Windows.Forms.Label lblNaamApparaat;
         private System.Windows.Forms.Button btnVerwijder;
         private System.Windows.Forms.Label lblStatusTag;

@@ -26,7 +26,23 @@ namespace uitleen_applicatie
 
             selectedId = id;
 
-            lblNaamApparaat.Text = id.ToString();
+            string sqlQuery = "SELECT * FROM apparaten WHERE ID = " + selectedId;
+
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(sqlQuery, connection);
+
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                if (dataReader.Read())
+                {
+                    lblNaamApparaat.Text = dataReader["Naam"] + "";
+                    lblSerieNummer.Text = dataReader["SerieNummer"] + "";
+                    lblBeschrijving.Text = dataReader["Beschrijving"] + "";
+                    lblCommentaar.Text = dataReader["commetaar"] + "";
+                    lblStatus.Text = dataReader["Status"] + "";
+                }
+            }
         }
 
         private void InitializeDatabaseConnection()
