@@ -153,6 +153,11 @@ namespace uitleen_applicatie
         {
             UpdateDevice();
         }
+
+        private void tbCommentaar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
