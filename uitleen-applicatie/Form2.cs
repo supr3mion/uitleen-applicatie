@@ -74,7 +74,12 @@ namespace uitleen_applicatie
         }
         private void Form2_Load(object sender, EventArgs e)
         {
+            Close();
+        }
 
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            Update apparaten();
         }
     }
 }
