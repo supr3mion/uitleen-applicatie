@@ -13,7 +13,7 @@ namespace uitleen_applicatie
 {
     public partial class Form1 : Form
     {
-        private MySqlConnection connection;
+        private MySql.Data.MySqlClient.MySqlConnection connection;
 
         public Form1()
         {

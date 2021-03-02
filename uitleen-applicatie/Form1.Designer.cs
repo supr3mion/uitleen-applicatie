@@ -56,7 +56,7 @@ namespace uitleen_applicatie
             this.lvDevices.TabIndex = 0;
             this.lvDevices.UseCompatibleStateImageBehavior = false;
             this.lvDevices.View = System.Windows.Forms.View.Details;
-            this.lvDevices.SelectedIndexChanged += new System.EventHandler(this.lvDevices_SelectedIndexChanged);
+            
             // 
             // Naam
             // 
@@ -102,7 +102,7 @@ namespace uitleen_applicatie
             this.btnReload.TabIndex = 2;
             this.btnReload.Text = "Herladen";
             this.btnReload.UseVisualStyleBackColor = true;
-            this.btnReload.Click += new System.EventHandler(this.reload_Click);
+            
             // 
             // btnUitlenen
             // 
@@ -135,7 +135,7 @@ namespace uitleen_applicatie
             this.Controls.Add(this.lvDevices);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            
             this.ResumeLayout(false);
 
         }

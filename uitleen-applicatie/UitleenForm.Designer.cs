@@ -91,7 +91,7 @@ namespace uitleen_applicatie
             this.Controls.Add(this.textBox1);
             this.Name = "UitleenForm";
             this.Text = "UitleenForm";
-            this.Load += new System.EventHandler(this.UitleenForm_Load);
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 
