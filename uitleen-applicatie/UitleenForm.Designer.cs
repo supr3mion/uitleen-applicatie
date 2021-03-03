@@ -41,7 +41,8 @@ namespace uitleen_applicatie
             // tbLeerlingnummer
             // 
             this.tbLeerlingnummer.AccessibleName = "tbLeerlingnummer";
-            this.tbLeerlingnummer.Location = new System.Drawing.Point(319, 81);
+            this.tbLeerlingnummer.Location = new System.Drawing.Point(319, 86);
+            this.tbLeerlingnummer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbLeerlingnummer.Name = "tbLeerlingnummer";
             this.tbLeerlingnummer.Size = new System.Drawing.Size(100, 20);
             this.tbLeerlingnummer.TabIndex = 2;
@@ -50,16 +51,16 @@ namespace uitleen_applicatie
             // Textlbl
             // 
             this.Textlbl.AutoSize = true;
-            this.Textlbl.Location = new System.Drawing.Point(686, 125);
-            this.Textlbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.Textlbl.Location = new System.Drawing.Point(343, 65);
             this.Textlbl.Name = "Textlbl";
-            this.Textlbl.Size = new System.Drawing.Size(96, 25);
+            this.Textlbl.Size = new System.Drawing.Size(48, 13);
             this.Textlbl.TabIndex = 3;
             this.Textlbl.Text = "Uillenen:";
             // 
             // tbNaam
             // 
-            this.tbNaam.Location = new System.Drawing.Point(319, 107);
+            this.tbNaam.Location = new System.Drawing.Point(319, 110);
+            this.tbNaam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbNaam.Name = "tbNaam";
             this.tbNaam.Size = new System.Drawing.Size(100, 20);
             this.tbNaam.TabIndex = 4;
@@ -67,7 +68,8 @@ namespace uitleen_applicatie
             // 
             // tbDatum
             // 
-            this.tbDatum.Location = new System.Drawing.Point(319, 133);
+            this.tbDatum.Location = new System.Drawing.Point(319, 134);
+            this.tbDatum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbDatum.Name = "tbDatum";
             this.tbDatum.Size = new System.Drawing.Size(100, 20);
             this.tbDatum.TabIndex = 5;
@@ -75,21 +77,19 @@ namespace uitleen_applicatie
             // 
             // tbCommentaar
             // 
-            this.tbCommentaar.Location = new System.Drawing.Point(502, 306);
-            this.tbCommentaar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tbCommentaar.Location = new System.Drawing.Point(251, 159);
             this.tbCommentaar.Multiline = true;
             this.tbCommentaar.Name = "tbCommentaar";
-            this.tbCommentaar.Size = new System.Drawing.Size(488, 298);
+            this.tbCommentaar.Size = new System.Drawing.Size(246, 157);
             this.tbCommentaar.TabIndex = 6;
             this.tbCommentaar.Text = "                             Commetaar:";
             this.tbCommentaar.TextChanged += new System.EventHandler(this.tbCommentaar_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(810, 717);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Location = new System.Drawing.Point(405, 373);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 44);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -97,10 +97,9 @@ namespace uitleen_applicatie
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(554, 717);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button2.Location = new System.Drawing.Point(277, 373);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 44);
+            this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 8;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
@@ -108,10 +107,10 @@ namespace uitleen_applicatie
             // 
             // UitleenForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(1600, 865);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tbCommentaar);
@@ -119,6 +118,7 @@ namespace uitleen_applicatie
             this.Controls.Add(this.tbNaam);
             this.Controls.Add(this.Textlbl);
             this.Controls.Add(this.tbLeerlingnummer);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UitleenForm";
             this.Text = "UitleenForm";
             this.ResumeLayout(false);
