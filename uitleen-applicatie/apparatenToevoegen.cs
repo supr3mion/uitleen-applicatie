@@ -104,6 +104,8 @@ namespace uitleen_applicatie
                 MessageBox.Show("Verstuurd");
             }
             connection.Close();
+           
+            Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
