@@ -71,15 +71,51 @@ namespace uitleen_applicatie
                 MessageBox.Show(ex.Message);
                 return false;
             }
+
+
         }
-        private void Form2_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            Update apparaten();
+            string insertquery = "INSERT INTO friesepoort.apparaten(Naam, SerieNummer, Beschrijving) VALUES(@Naam, @SerieNummer, @Beschrijving)";
+            
+            connection.Open();
+
+            MySqlCommand cmd = new MySqlCommand(insertquery, connection);
+
+            cmd.Parameters.Add("@Naam", MySqlDbType.VarChar,50);
+            cmd.Parameters.Add("@SerieNummer", MySqlDbType.Int32,225);
+            cmd.Parameters.Add("@Beschrijving", MySqlDbType.Text, 50);
+           
+            
+            cmd.Parameters["@naam"].Value = txbNaam;
+            cmd.Parameters["@SerieNummer"].Value = txbSerieNummer;
+            cmd.Parameters["@Beschrijving"].Value = txbBeschrijving;
+
+            if (cmd.ExecuteNonQuery()== 1)
+            {
+                MessageBox.Show("Verstuurd");
+            }
+            connection.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opf = new OpenFileDialog();
+            opf.Filter = "kies afbeelding(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";
+            if (opf.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = Image.FromFile(opf.FileName);
+            }
         }
     }
 }

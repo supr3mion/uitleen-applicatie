@@ -139,7 +139,7 @@ namespace uitleen_applicatie
         {
 
         }
-
+        
         private void btnUitlenen_Click(object sender, EventArgs e)
         {
             string selectedId = lvDevices.SelectedItems[0].SubItems[5].Text;
@@ -158,6 +158,12 @@ namespace uitleen_applicatie
 
             Overzicht myOverzicht = new Overzicht(id);
             myOverzicht.ShowDialog();
+        }
+
+        private void btnAdd_Click_1(object sender, EventArgs e)
+        {
+            apparatenToevoegen openapparatenToevoegen = new apparatenToevoegen();
+            openapparatenToevoegen.ShowDialog();
         }
     }
 }
