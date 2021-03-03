@@ -40,8 +40,8 @@ namespace uitleen_applicatie
             this.lblCommentaar = new System.Windows.Forms.Label();
             this.lblSerieNummerTag = new System.Windows.Forms.Label();
             this.lblSerieNummer = new System.Windows.Forms.Label();
-            this.pbFoto = new System.Windows.Forms.PictureBox();
             this.lblNaamApparaat = new System.Windows.Forms.Label();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             this.mainPannel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
@@ -61,16 +61,16 @@ namespace uitleen_applicatie
             this.mainPannel.Controls.Add(this.lblSerieNummer);
             this.mainPannel.Controls.Add(this.pbFoto);
             this.mainPannel.Controls.Add(this.lblNaamApparaat);
-            this.mainPannel.Location = new System.Drawing.Point(139, 60);
+            this.mainPannel.Location = new System.Drawing.Point(94, 29);
             this.mainPannel.Name = "mainPannel";
-            this.mainPannel.Size = new System.Drawing.Size(527, 303);
+            this.mainPannel.Size = new System.Drawing.Size(616, 378);
             this.mainPannel.TabIndex = 0;
             // 
             // lblDatumRetour
             // 
             this.lblDatumRetour.BackColor = System.Drawing.Color.Transparent;
-            this.lblDatumRetour.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatumRetour.Location = new System.Drawing.Point(363, 208);
+            this.lblDatumRetour.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatumRetour.Location = new System.Drawing.Point(418, 271);
             this.lblDatumRetour.Name = "lblDatumRetour";
             this.lblDatumRetour.Size = new System.Drawing.Size(150, 19);
             this.lblDatumRetour.TabIndex = 10;
@@ -81,7 +81,7 @@ namespace uitleen_applicatie
             // btnVerwijder
             // 
             this.btnVerwijder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerwijder.Location = new System.Drawing.Point(363, 242);
+            this.btnVerwijder.Location = new System.Drawing.Point(12, 329);
             this.btnVerwijder.Name = "btnVerwijder";
             this.btnVerwijder.Size = new System.Drawing.Size(150, 36);
             this.btnVerwijder.TabIndex = 1;
@@ -92,8 +92,8 @@ namespace uitleen_applicatie
             // lblStatusTag
             // 
             this.lblStatusTag.BackColor = System.Drawing.Color.Transparent;
-            this.lblStatusTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatusTag.Location = new System.Drawing.Point(360, 174);
+            this.lblStatusTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatusTag.Location = new System.Drawing.Point(415, 256);
             this.lblStatusTag.Name = "lblStatusTag";
             this.lblStatusTag.Size = new System.Drawing.Size(153, 15);
             this.lblStatusTag.TabIndex = 9;
@@ -104,8 +104,8 @@ namespace uitleen_applicatie
             // lblStatus
             // 
             this.lblStatus.BackColor = System.Drawing.Color.Transparent;
-            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(363, 189);
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Location = new System.Drawing.Point(418, 290);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(150, 19);
             this.lblStatus.TabIndex = 8;
@@ -116,10 +116,10 @@ namespace uitleen_applicatie
             // lblBeschrijvingTag
             // 
             this.lblBeschrijvingTag.BackColor = System.Drawing.Color.Transparent;
-            this.lblBeschrijvingTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBeschrijvingTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBeschrijvingTag.Location = new System.Drawing.Point(9, 132);
             this.lblBeschrijvingTag.Name = "lblBeschrijvingTag";
-            this.lblBeschrijvingTag.Size = new System.Drawing.Size(74, 15);
+            this.lblBeschrijvingTag.Size = new System.Drawing.Size(85, 15);
             this.lblBeschrijvingTag.TabIndex = 7;
             this.lblBeschrijvingTag.Tag = "";
             this.lblBeschrijvingTag.Text = "beschrijving:";
@@ -127,10 +127,10 @@ namespace uitleen_applicatie
             // lblBeschrijving
             // 
             this.lblBeschrijving.BackColor = System.Drawing.Color.Transparent;
-            this.lblBeschrijving.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBeschrijving.Location = new System.Drawing.Point(12, 147);
+            this.lblBeschrijving.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBeschrijving.Location = new System.Drawing.Point(9, 147);
             this.lblBeschrijving.Name = "lblBeschrijving";
-            this.lblBeschrijving.Size = new System.Drawing.Size(144, 97);
+            this.lblBeschrijving.Size = new System.Drawing.Size(144, 162);
             this.lblBeschrijving.TabIndex = 6;
             this.lblBeschrijving.Tag = "";
             this.lblBeschrijving.Text = "[beschrijving]";
@@ -138,10 +138,10 @@ namespace uitleen_applicatie
             // lblCommentaarTag
             // 
             this.lblCommentaarTag.BackColor = System.Drawing.Color.Transparent;
-            this.lblCommentaarTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCommentaarTag.Location = new System.Drawing.Point(182, 132);
+            this.lblCommentaarTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCommentaarTag.Location = new System.Drawing.Point(182, 130);
             this.lblCommentaarTag.Name = "lblCommentaarTag";
-            this.lblCommentaarTag.Size = new System.Drawing.Size(74, 15);
+            this.lblCommentaarTag.Size = new System.Drawing.Size(84, 15);
             this.lblCommentaarTag.TabIndex = 5;
             this.lblCommentaarTag.Tag = "";
             this.lblCommentaarTag.Text = "commentaar:";
@@ -149,10 +149,10 @@ namespace uitleen_applicatie
             // lblCommentaar
             // 
             this.lblCommentaar.BackColor = System.Drawing.Color.Transparent;
-            this.lblCommentaar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCommentaar.Location = new System.Drawing.Point(185, 147);
+            this.lblCommentaar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCommentaar.Location = new System.Drawing.Point(182, 145);
             this.lblCommentaar.Name = "lblCommentaar";
-            this.lblCommentaar.Size = new System.Drawing.Size(144, 97);
+            this.lblCommentaar.Size = new System.Drawing.Size(144, 164);
             this.lblCommentaar.TabIndex = 4;
             this.lblCommentaar.Tag = "";
             this.lblCommentaar.Text = "[commentaar]";
@@ -160,10 +160,10 @@ namespace uitleen_applicatie
             // lblSerieNummerTag
             // 
             this.lblSerieNummerTag.BackColor = System.Drawing.Color.Transparent;
-            this.lblSerieNummerTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSerieNummerTag.Location = new System.Drawing.Point(9, 90);
+            this.lblSerieNummerTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSerieNummerTag.Location = new System.Drawing.Point(12, 90);
             this.lblSerieNummerTag.Name = "lblSerieNummerTag";
-            this.lblSerieNummerTag.Size = new System.Drawing.Size(74, 15);
+            this.lblSerieNummerTag.Size = new System.Drawing.Size(94, 15);
             this.lblSerieNummerTag.TabIndex = 3;
             this.lblSerieNummerTag.Tag = "";
             this.lblSerieNummerTag.Text = "serie nummer:";
@@ -171,22 +171,13 @@ namespace uitleen_applicatie
             // lblSerieNummer
             // 
             this.lblSerieNummer.BackColor = System.Drawing.Color.Transparent;
-            this.lblSerieNummer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSerieNummer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSerieNummer.Location = new System.Drawing.Point(12, 105);
             this.lblSerieNummer.Name = "lblSerieNummer";
-            this.lblSerieNummer.Size = new System.Drawing.Size(144, 16);
+            this.lblSerieNummer.Size = new System.Drawing.Size(187, 16);
             this.lblSerieNummer.TabIndex = 2;
             this.lblSerieNummer.Tag = "";
             this.lblSerieNummer.Text = "[serie nummer]";
-            // 
-            // pbFoto
-            // 
-            this.pbFoto.Location = new System.Drawing.Point(335, 21);
-            this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(178, 150);
-            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbFoto.TabIndex = 1;
-            this.pbFoto.TabStop = false;
             // 
             // lblNaamApparaat
             // 
@@ -197,6 +188,15 @@ namespace uitleen_applicatie
             this.lblNaamApparaat.Size = new System.Drawing.Size(244, 69);
             this.lblNaamApparaat.TabIndex = 0;
             this.lblNaamApparaat.Text = "[naam]";
+            // 
+            // pbFoto
+            // 
+            this.pbFoto.Location = new System.Drawing.Point(363, 3);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(250, 250);
+            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbFoto.TabIndex = 1;
+            this.pbFoto.TabStop = false;
             // 
             // Overzicht
             // 

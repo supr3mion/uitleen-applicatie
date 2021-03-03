@@ -120,7 +120,7 @@ namespace uitleen_applicatie
             this.Controls.Add(this.tbLeerlingnummer);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UitleenForm";
-            this.Text = "UitleenForm";
+            this.Text = "Uitlenen";
             this.ResumeLayout(false);
             this.PerformLayout();
 

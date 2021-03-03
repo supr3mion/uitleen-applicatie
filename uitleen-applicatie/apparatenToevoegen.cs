@@ -103,8 +103,6 @@ namespace uitleen_applicatie
             cmd.Parameters["@DatumRetour"].Value = DateTime.Now;
             cmd.Parameters["@FotoID"].Value = Int32.Parse(txbSerieNummer.Text);
 
-            cmd.ExecuteNonQuery();
-
             string imgPath = @"D:\device-images";
 
 
@@ -142,5 +140,7 @@ namespace uitleen_applicatie
                 lblTest.Text = opf.FileName;
             }
         }
+
+
     }
 }

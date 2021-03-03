@@ -98,7 +98,7 @@ namespace uitleen_applicatie
                     resultList[2].Add(dataReader["Beschrijving"] + "");
                     resultList[3].Add(dataReader["Status"] + "");
 
-                    DateTime dateValue = DateTime.Parse( dataReader["DatumRetour"]+ "");
+                    DateTime dateValue = DateTime.Parse(dataReader["DatumRetour"]+ "");
 
                     resultList[4].Add(dateValue.ToString("dd-MM-yyyy"));
 
