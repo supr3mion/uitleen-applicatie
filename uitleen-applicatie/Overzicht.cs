@@ -40,7 +40,7 @@ namespace uitleen_applicatie
                     lblSerieNummer.Text = dataReader["SerieNummer"] + "";
                     lblBeschrijving.Text = dataReader["Beschrijving"] + "";
                     lblCommentaar.Text = dataReader["commetaar"] + "";
-                    lblStatus.Text = dataReader["Status"] + "";
+                    lblStatus.Text = "[" + dataReader["Status"] + "]";
                 }
             }
         }
@@ -95,5 +95,16 @@ namespace uitleen_applicatie
             }
         }
 
+        private void btnVerwijder_Click(object sender, EventArgs e)
+        {
+            string sqlQuery = "DELETE FROM apparaten WHERE ID = " + selectedId;
+
+            if (this.OpenConnection() == true)
+            {
+
+                MySqlCommand cmd = new MySqlCommand(sqlQuery, connection);
+
+            }
+        }
     }
 }
