@@ -29,22 +29,23 @@ namespace uitleen_applicatie
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbLeerlingnummer = new System.Windows.Forms.TextBox();
             this.Textlbl = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbNaam = new System.Windows.Forms.TextBox();
+            this.tbDatum = new System.Windows.Forms.TextBox();
             this.tbCommentaar = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbLeerlingnummer
             // 
-            this.textBox1.Location = new System.Drawing.Point(319, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "   Leerlingnummer:";
+            this.tbLeerlingnummer.AccessibleName = "tbLeerlingnummer";
+            this.tbLeerlingnummer.Location = new System.Drawing.Point(319, 81);
+            this.tbLeerlingnummer.Name = "tbLeerlingnummer";
+            this.tbLeerlingnummer.Size = new System.Drawing.Size(100, 20);
+            this.tbLeerlingnummer.TabIndex = 2;
+            this.tbLeerlingnummer.Text = "   Leerlingnummer:";
             // 
             // Textlbl
             // 
@@ -55,21 +56,21 @@ namespace uitleen_applicatie
             this.Textlbl.TabIndex = 3;
             this.Textlbl.Text = "Uillenen:";
             // 
-            // textBox2
+            // tbNaam
             // 
-            this.textBox2.Location = new System.Drawing.Point(319, 107);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "    Naam Leerling:";
+            this.tbNaam.Location = new System.Drawing.Point(319, 107);
+            this.tbNaam.Name = "tbNaam";
+            this.tbNaam.Size = new System.Drawing.Size(100, 20);
+            this.tbNaam.TabIndex = 4;
+            this.tbNaam.Text = "    Naam Leerling:";
             // 
-            // textBox3
+            // tbDatum
             // 
-            this.textBox3.Location = new System.Drawing.Point(319, 133);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.Text = " Datum van Retour:";
+            this.tbDatum.Location = new System.Drawing.Point(319, 133);
+            this.tbDatum.Name = "tbDatum";
+            this.tbDatum.Size = new System.Drawing.Size(100, 20);
+            this.tbDatum.TabIndex = 5;
+            this.tbDatum.Text = " Datum van Retour:";
             // 
             // tbCommentaar
             // 
@@ -109,10 +110,10 @@ namespace uitleen_applicatie
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tbCommentaar);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbDatum);
+            this.Controls.Add(this.tbNaam);
             this.Controls.Add(this.Textlbl);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbLeerlingnummer);
             this.Name = "UitleenForm";
             this.Text = "UitleenForm";
             this.ResumeLayout(false);
@@ -122,10 +123,10 @@ namespace uitleen_applicatie
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbLeerlingnummer;
         private System.Windows.Forms.Label Textlbl;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbNaam;
+        private System.Windows.Forms.TextBox tbDatum;
         private System.Windows.Forms.TextBox tbCommentaar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
