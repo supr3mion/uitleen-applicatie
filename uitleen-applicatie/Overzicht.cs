@@ -105,6 +105,8 @@ namespace uitleen_applicatie
 
                 MySqlCommand cmd = new MySqlCommand(sqlQuery, connection);
 
+                cmd.ExecuteNonQuery();
+
             }
         }
     }
