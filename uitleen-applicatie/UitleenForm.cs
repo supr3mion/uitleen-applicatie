@@ -141,19 +141,19 @@ namespace uitleen_applicatie
             MySqlCommand cmd = new MySqlCommand(insertquery, connection);
 
             cmd.Parameters.Add("@NaamLeerling", MySqlDbType.VarChar, 50);
-            cmd.Parameters.Add("@SerieNummer", MySqlDbType.Int32, 225);
-            cmd.Parameters.Add("@Beschrijving", MySqlDbType.Text);
+            cmd.Parameters.Add("@LeerlingNummer", MySqlDbType.VarChar, 20);
             cmd.Parameters.Add("@DatumRetour", MySqlDbType.DateTime);
+            cmd.Parameters.Add("@commetaar", MySqlDbType.Text);
 
 
-            //cmd.Parameters["@naam"].Value = txbNaam.Text;
-            //cmd.Parameters["@SerieNummer"].Value = Int32.Parse(txbSerieNummer.Text);
-            //cmd.Parameters["@Beschrijving"].Value = txbBeschrijving.Text;
-            //cmd.Parameters["@DatumRetour"].Value = DateTime.Now;
+            cmd.Parameters["@NaamLeerling"].Value = tbNaam.Text;
+            cmd.Parameters["@Leerlingnummer"].Value = tbLeerlingnummer.Text;
+            cmd.Parameters["@DatumRetour"].Value = DateTime.Parse(dtpDatumRetour.Text);
+            cmd.Parameters["@commetaar"].Value = tbCommentaar.Text;
 
             if (cmd.ExecuteNonQuery() == 1)
             {
-                MessageBox.Show("Verstuurd");
+                MessageBox.Show("Opgeslagen");
             }
             connection.Close();
         }

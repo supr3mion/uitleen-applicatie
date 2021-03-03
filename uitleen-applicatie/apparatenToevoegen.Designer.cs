@@ -47,10 +47,11 @@ namespace uitleen_applicatie
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(266, 76);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.label1.Location = new System.Drawing.Point(464, 120);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.Size = new System.Drawing.Size(244, 48);
             this.label1.TabIndex = 0;
             this.label1.Text = "apparatuur :";
             // 
@@ -86,7 +87,7 @@ namespace uitleen_applicatie
             this.button1.Location = new System.Drawing.Point(516, 295);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 33);
+            this.button1.Size = new System.Drawing.Size(254, 63);
             this.button1.TabIndex = 4;
             this.button1.Text = "annuleren";
             this.button1.UseVisualStyleBackColor = true;
@@ -97,7 +98,7 @@ namespace uitleen_applicatie
             this.button2.Location = new System.Drawing.Point(269, 295);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 33);
+            this.button2.Size = new System.Drawing.Size(214, 63);
             this.button2.TabIndex = 5;
             this.button2.Text = "opslaan";
             this.button2.UseVisualStyleBackColor = true;
@@ -165,7 +166,7 @@ namespace uitleen_applicatie
             // 
             // apparatenToevoegen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
