@@ -30,6 +30,7 @@ namespace uitleen_applicatie
         private void InitializeComponent()
         {
             this.mainPannel = new System.Windows.Forms.Panel();
+            this.lblDatumRetour = new System.Windows.Forms.Label();
             this.btnVerwijder = new System.Windows.Forms.Button();
             this.lblStatusTag = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@ namespace uitleen_applicatie
             this.lblSerieNummer = new System.Windows.Forms.Label();
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.lblNaamApparaat = new System.Windows.Forms.Label();
-            this.lblDatumRetour = new System.Windows.Forms.Label();
             this.mainPannel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
@@ -66,6 +66,18 @@ namespace uitleen_applicatie
             this.mainPannel.Size = new System.Drawing.Size(527, 303);
             this.mainPannel.TabIndex = 0;
             // 
+            // lblDatumRetour
+            // 
+            this.lblDatumRetour.BackColor = System.Drawing.Color.Transparent;
+            this.lblDatumRetour.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatumRetour.Location = new System.Drawing.Point(363, 208);
+            this.lblDatumRetour.Name = "lblDatumRetour";
+            this.lblDatumRetour.Size = new System.Drawing.Size(150, 19);
+            this.lblDatumRetour.TabIndex = 10;
+            this.lblDatumRetour.Tag = "";
+            this.lblDatumRetour.Text = "[datum retour]";
+            this.lblDatumRetour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnVerwijder
             // 
             this.btnVerwijder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -73,7 +85,7 @@ namespace uitleen_applicatie
             this.btnVerwijder.Name = "btnVerwijder";
             this.btnVerwijder.Size = new System.Drawing.Size(150, 36);
             this.btnVerwijder.TabIndex = 1;
-            this.btnVerwijder.Text = "apperaat verwijderen";
+            this.btnVerwijder.Text = "apparaat verwijderen";
             this.btnVerwijder.UseVisualStyleBackColor = true;
             this.btnVerwijder.Click += new System.EventHandler(this.btnVerwijder_Click);
             // 
@@ -115,7 +127,6 @@ namespace uitleen_applicatie
             // lblBeschrijving
             // 
             this.lblBeschrijving.BackColor = System.Drawing.Color.Transparent;
-            this.lblBeschrijving.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblBeschrijving.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBeschrijving.Location = new System.Drawing.Point(12, 147);
             this.lblBeschrijving.Name = "lblBeschrijving";
@@ -138,7 +149,6 @@ namespace uitleen_applicatie
             // lblCommentaar
             // 
             this.lblCommentaar.BackColor = System.Drawing.Color.Transparent;
-            this.lblCommentaar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblCommentaar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCommentaar.Location = new System.Drawing.Point(185, 147);
             this.lblCommentaar.Name = "lblCommentaar";
@@ -161,7 +171,6 @@ namespace uitleen_applicatie
             // lblSerieNummer
             // 
             this.lblSerieNummer.BackColor = System.Drawing.Color.Transparent;
-            this.lblSerieNummer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblSerieNummer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSerieNummer.Location = new System.Drawing.Point(12, 105);
             this.lblSerieNummer.Name = "lblSerieNummer";
@@ -172,9 +181,9 @@ namespace uitleen_applicatie
             // 
             // pbFoto
             // 
-            this.pbFoto.Location = new System.Drawing.Point(363, 21);
+            this.pbFoto.Location = new System.Drawing.Point(335, 21);
             this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(150, 150);
+            this.pbFoto.Size = new System.Drawing.Size(178, 150);
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbFoto.TabIndex = 1;
             this.pbFoto.TabStop = false;
@@ -182,25 +191,12 @@ namespace uitleen_applicatie
             // lblNaamApparaat
             // 
             this.lblNaamApparaat.BackColor = System.Drawing.Color.Transparent;
-            this.lblNaamApparaat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblNaamApparaat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNaamApparaat.Location = new System.Drawing.Point(12, 21);
             this.lblNaamApparaat.Name = "lblNaamApparaat";
             this.lblNaamApparaat.Size = new System.Drawing.Size(244, 69);
             this.lblNaamApparaat.TabIndex = 0;
             this.lblNaamApparaat.Text = "[naam]";
-            // 
-            // lblDatumRetour
-            // 
-            this.lblDatumRetour.BackColor = System.Drawing.Color.Transparent;
-            this.lblDatumRetour.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatumRetour.Location = new System.Drawing.Point(363, 208);
-            this.lblDatumRetour.Name = "lblDatumRetour";
-            this.lblDatumRetour.Size = new System.Drawing.Size(150, 19);
-            this.lblDatumRetour.TabIndex = 10;
-            this.lblDatumRetour.Tag = "";
-            this.lblDatumRetour.Text = "[datum retour]";
-            this.lblDatumRetour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Overzicht
             // 

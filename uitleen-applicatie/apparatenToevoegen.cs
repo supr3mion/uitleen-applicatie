@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using System.IO;
 
 namespace uitleen_applicatie
 {
@@ -81,8 +82,8 @@ namespace uitleen_applicatie
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string insertquery = "INSERT INTO friesepoort.apparaten(Naam, SerieNummer, Beschrijving, DatumRetour, Status) " +
-                "VALUES(@Naam, @SerieNummer, @Beschrijving, @DatumRetour, 'beschikbaar')";
+            string insertquery = "INSERT INTO friesepoort.apparaten(Naam, SerieNummer, Beschrijving, DatumRetour, Status, Foto) " +
+                "VALUES(@Naam, @SerieNummer, @Beschrijving, @DatumRetour, 'beschikbaar', @FotoID)";
             
             connection.Open();
 
@@ -92,18 +93,38 @@ namespace uitleen_applicatie
             cmd.Parameters.Add("@SerieNummer", MySqlDbType.Int32,225);
             cmd.Parameters.Add("@Beschrijving", MySqlDbType.Text);
             cmd.Parameters.Add("@DatumRetour", MySqlDbType.DateTime);
-           
-            
+            cmd.Parameters.Add("@FotoID", MySqlDbType.Int32,225);
+
+
+
             cmd.Parameters["@naam"].Value = txbNaam.Text;
             cmd.Parameters["@SerieNummer"].Value = Int32.Parse(txbSerieNummer.Text);
             cmd.Parameters["@Beschrijving"].Value = txbBeschrijving.Text;
             cmd.Parameters["@DatumRetour"].Value = DateTime.Now;
+            cmd.Parameters["@FotoID"].Value = Int32.Parse(txbSerieNummer.Text);
+
+            cmd.ExecuteNonQuery();
+
+            string imgPath = @"D:\device-images";
+
+
+            if (!Directory.Exists(imgPath))
+            {
+                Directory.CreateDirectory(imgPath);
+                File.Copy(lblTest.Text, @"D:\device-images\" + Int32.Parse(txbSerieNummer.Text) + ".png");
+            }
+            else
+            {
+                File.Copy(lblTest.Text, @"D:\device-images\" + Int32.Parse(txbSerieNummer.Text) + ".png");
+
+            }
 
             if (cmd.ExecuteNonQuery()== 1)
             {
-                MessageBox.Show("Verstuurd");
+                MessageBox.Show("Opgeslagen");
             }
             connection.Close();
+            Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -111,13 +132,14 @@ namespace uitleen_applicatie
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        public void button3_Click(object sender, EventArgs e)
         {
             OpenFileDialog opf = new OpenFileDialog();
-            opf.Filter = "kies afbeelding(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";
+            opf.Filter = "kies afbeelding(*.jpg; *.png;)|*.jpg; *.png;";
             if (opf.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.Image = Image.FromFile(opf.FileName);
+                lblTest.Text = opf.FileName;
             }
         }
     }

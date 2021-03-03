@@ -26,6 +26,7 @@ namespace uitleen_applicatie
 
             selectedId = id;
 
+
             string sqlQuery = "SELECT * FROM apparaten WHERE ID = " + selectedId;
 
             if (this.OpenConnection() == true)
@@ -41,7 +42,12 @@ namespace uitleen_applicatie
                     lblBeschrijving.Text = dataReader["Beschrijving"] + "";
                     lblCommentaar.Text = dataReader["commetaar"] + "";
                     lblStatus.Text = "[" + dataReader["Status"] + "]";
-                    lblDatumRetour.Text = "Datum Retour: " + dataReader["DatumRetour"];
+
+                    DateTime dateValue = DateTime.Parse(dataReader["DatumRetour"] + "");
+
+                    lblDatumRetour.Text = dateValue.ToString("dd-MM-yyyy");
+
+                    pbFoto.Image = Image.FromFile(@"D:\device-images\" + dataReader["SerieNummer"] + ".png");
                 }
                 
             }
@@ -109,10 +115,13 @@ namespace uitleen_applicatie
 
                 cmd.ExecuteNonQuery();
 
+                MessageBox.Show("verwijderd");
+
             }
             CloseConnection();
 
             Close();
         }
+
     }
 }

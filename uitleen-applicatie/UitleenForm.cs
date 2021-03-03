@@ -146,10 +146,10 @@ namespace uitleen_applicatie
             cmd.Parameters.Add("@DatumRetour", MySqlDbType.DateTime);
 
 
-            cmd.Parameters["@naam"].Value = txbNaam.Text;
-            cmd.Parameters["@SerieNummer"].Value = Int32.Parse(txbSerieNummer.Text);
-            cmd.Parameters["@Beschrijving"].Value = txbBeschrijving.Text;
-            cmd.Parameters["@DatumRetour"].Value = DateTime.Now;
+            //cmd.Parameters["@naam"].Value = txbNaam.Text;
+            //cmd.Parameters["@SerieNummer"].Value = Int32.Parse(txbSerieNummer.Text);
+            //cmd.Parameters["@Beschrijving"].Value = txbBeschrijving.Text;
+            //cmd.Parameters["@DatumRetour"].Value = DateTime.Now;
 
             if (cmd.ExecuteNonQuery() == 1)
             {
