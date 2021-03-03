@@ -43,16 +43,17 @@ namespace uitleen_applicatie
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(532, 146);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.label1.Location = new System.Drawing.Point(464, 120);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 25);
+            this.label1.Size = new System.Drawing.Size(244, 48);
             this.label1.TabIndex = 0;
             this.label1.Text = "apparatuur :";
             // 
             // txbNaam
             // 
-            this.txbNaam.Location = new System.Drawing.Point(536, 185);
+            this.txbNaam.Location = new System.Drawing.Point(472, 205);
             this.txbNaam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbNaam.Multiline = true;
             this.txbNaam.Name = "txbNaam";
@@ -62,7 +63,7 @@ namespace uitleen_applicatie
             // 
             // txbSerieNummer
             // 
-            this.txbSerieNummer.Location = new System.Drawing.Point(536, 238);
+            this.txbSerieNummer.Location = new System.Drawing.Point(472, 264);
             this.txbSerieNummer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbSerieNummer.Multiline = true;
             this.txbSerieNummer.Name = "txbSerieNummer";
@@ -72,17 +73,18 @@ namespace uitleen_applicatie
             // 
             // txbBeschrijving
             // 
-            this.txbBeschrijving.Location = new System.Drawing.Point(536, 296);
+            this.txbBeschrijving.Location = new System.Drawing.Point(472, 330);
             this.txbBeschrijving.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbBeschrijving.Multiline = true;
             this.txbBeschrijving.Name = "txbBeschrijving";
-            this.txbBeschrijving.Size = new System.Drawing.Size(214, 33);
+            this.txbBeschrijving.Size = new System.Drawing.Size(382, 182);
             this.txbBeschrijving.TabIndex = 3;
-            this.txbBeschrijving.Text = "       beschrijving:";
+            this.txbBeschrijving.Text = "beschrijving:";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(536, 704);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.button1.Location = new System.Drawing.Point(472, 740);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(214, 63);
@@ -93,7 +95,8 @@ namespace uitleen_applicatie
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(816, 704);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.button2.Location = new System.Drawing.Point(800, 740);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(214, 63);
@@ -104,10 +107,10 @@ namespace uitleen_applicatie
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(536, 362);
+            this.pictureBox1.Location = new System.Drawing.Point(976, 102);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(372, 208);
+            this.pictureBox1.Size = new System.Drawing.Size(583, 550);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -115,10 +118,11 @@ namespace uitleen_applicatie
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(536, 596);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.button3.Location = new System.Drawing.Point(472, 592);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(236, 48);
+            this.button3.Size = new System.Drawing.Size(354, 60);
             this.button3.TabIndex = 7;
             this.button3.Text = "kies afbeelding ";
             this.button3.UseVisualStyleBackColor = true;
