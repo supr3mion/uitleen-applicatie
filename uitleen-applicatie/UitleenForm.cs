@@ -37,6 +37,7 @@ namespace uitleen_applicatie
                     tbCommentaar.Text = dataReader["Commetaar"] + "";
                 }
             }
+            CloseConnection();
         }
 
          private void InitializeDatabaseConnection()
@@ -75,48 +76,86 @@ namespace uitleen_applicatie
                 return false;
             }
         }
-         
+
+        private bool CloseConnection()
+        {
+            try
+            {
+                connection.Close();
+                return true;
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
 
         public void UpdateDevice()
         {
 
-            string LeerlingNummer = tbLeerlingnummer.Text;
-            string NaamLeerling = tbNaam.Text;
-            string datum = tbDatum.Text;
-            string commentaar = tbCommentaar.Text;
+            //string LeerlingNummer = tbLeerlingnummer.Text;
+            //string NaamLeerling = tbNaam.Text;
+            //string datum = tbDatum.Text;
+            //string commentaar = tbCommentaar.Text;
 
 
-            // maken van een UPDATE sql om gegevens te wijzigen.
-            //string sqlUpdateQuery = "UPDATE apparaten SET LeerlingNummer  = '" + leerlingnummer + "';
-            //string sqlUpdateQuery = "UPDATE apparaten SET NaamLeerling = '" + naam + "' Where id = " + selectedId;
-            //string sqlUpdateQuery = "UPDATE apparaten SET DatumRetour = '" + datum + "' Where id = " + selectedId;
-            //string sqlUpdateQuery = "UPDATE apparaten SET Commentaar = '" + commentaar + "' Where id = " + selectedId;
+            //// maken van een UPDATE sql om gegevens te wijzigen.
+            ////string sqlUpdateQuery = "UPDATE apparaten SET LeerlingNummer  = '" + leerlingnummer + "';
+            ////string sqlUpdateQuery = "UPDATE apparaten SET NaamLeerling = '" + naam + "' Where id = " + selectedId;
+            ////string sqlUpdateQuery = "UPDATE apparaten SET DatumRetour = '" + datum + "' Where id = " + selectedId;
+            ////string sqlUpdateQuery = "UPDATE apparaten SET Commentaar = '" + commentaar + "' Where id = " + selectedId;
 
-            //UPDATE apparaten SET NaamLeerling = " + LeerlingNummer + ", LeerlingNaam = " + NaamLeerling + ", DatumRetour = " + datum + ", Commetaar = " + commentaar + ", Status = uitgeleend WHERE ID = " + id + ";
-
-
-            string sqlUpdateQuery = "UPDATE apparaten SET NaamLeerling = " + LeerlingNummer + ", LeerlingNaam = " + NaamLeerling + ", DatumRetour = " + datum + ", Commetaar = " + commentaar + 
-                ", Status = uitgeleend WHERE ID = " + selectedId + "";
+            ////UPDATE apparaten SET NaamLeerling = " + LeerlingNummer + ", LeerlingNaam = " + NaamLeerling + ", DatumRetour = " + datum + ", Commetaar = " + commentaar + ", Status = uitgeleend WHERE ID = " + id + ";
 
 
-            // UPDATE tabelnaam
-            // SET Kolomnaam = waarde
-            // Where id = ?
-           
+            //string sqlUpdateQuery = "UPDATE apparaten SET NaamLeerling = " + LeerlingNummer + ", LeerlingNaam = " + NaamLeerling + ", DatumRetour = " + datum + ", Commetaar = " + commentaar + 
+            //    ", Status = uitgeleend WHERE ID = " + selectedId + "";
 
-            // openstellen van connectie.
-            if (this.OpenConnection() == true)
+
+            //// UPDATE tabelnaam
+            //// SET Kolomnaam = waarde
+            //// Where id = ?
+
+
+            //// openstellen van connectie.
+            //if (this.OpenConnection() == true)
+            //{
+
+            //    MySqlCommand cmd = new MySqlCommand(sqlUpdateQuery, connection);
+
+            //    cmd.ExecuteNonQuery();
+
+            //    //this.CloseConnection();
+
+
+            //}
+
+            //CloseConnection();
+
+            string insertquery = "UPDATE apparaten SET NaamLeerling = @NaamLeerling, LeerlingNummer = @LeerlingNummer, DatumRetour = @DatumRetour, Commetaar = @commetaar WHERE ID = " + selectedId + "";
+
+            connection.Open();
+
+            MySqlCommand cmd = new MySqlCommand(insertquery, connection);
+
+            cmd.Parameters.Add("@NaamLeerling", MySqlDbType.VarChar, 50);
+            cmd.Parameters.Add("@SerieNummer", MySqlDbType.Int32, 225);
+            cmd.Parameters.Add("@Beschrijving", MySqlDbType.Text);
+            cmd.Parameters.Add("@DatumRetour", MySqlDbType.DateTime);
+
+
+            cmd.Parameters["@naam"].Value = txbNaam.Text;
+            cmd.Parameters["@SerieNummer"].Value = Int32.Parse(txbSerieNummer.Text);
+            cmd.Parameters["@Beschrijving"].Value = txbBeschrijving.Text;
+            cmd.Parameters["@DatumRetour"].Value = DateTime.Now;
+
+            if (cmd.ExecuteNonQuery() == 1)
             {
-
-                MySqlCommand cmd = new MySqlCommand(sqlUpdateQuery, connection);
-
-                cmd.ExecuteNonQuery();
-
-                //this.CloseConnection();
-
-                
+                MessageBox.Show("Verstuurd");
             }
-            
+            connection.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)

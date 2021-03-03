@@ -81,7 +81,8 @@ namespace uitleen_applicatie
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string insertquery = "INSERT INTO friesepoort.apparaten(Naam, SerieNummer, Beschrijving) VALUES(@Naam, @SerieNummer, @Beschrijving)";
+            string insertquery = "INSERT INTO friesepoort.apparaten(Naam, SerieNummer, Beschrijving, DatumRetour, Status) " +
+                "VALUES(@Naam, @SerieNummer, @Beschrijving, @DatumRetour, 'beschikbaar')";
             
             connection.Open();
 
@@ -89,12 +90,14 @@ namespace uitleen_applicatie
 
             cmd.Parameters.Add("@Naam", MySqlDbType.VarChar,50);
             cmd.Parameters.Add("@SerieNummer", MySqlDbType.Int32,225);
-            cmd.Parameters.Add("@Beschrijving", MySqlDbType.Text, 50);
+            cmd.Parameters.Add("@Beschrijving", MySqlDbType.Text);
+            cmd.Parameters.Add("@DatumRetour", MySqlDbType.DateTime);
            
             
-            cmd.Parameters["@naam"].Value = txbNaam;
-            cmd.Parameters["@SerieNummer"].Value = txbSerieNummer;
-            cmd.Parameters["@Beschrijving"].Value = txbBeschrijving;
+            cmd.Parameters["@naam"].Value = txbNaam.Text;
+            cmd.Parameters["@SerieNummer"].Value = Int32.Parse(txbSerieNummer.Text);
+            cmd.Parameters["@Beschrijving"].Value = txbBeschrijving.Text;
+            cmd.Parameters["@DatumRetour"].Value = DateTime.Now;
 
             if (cmd.ExecuteNonQuery()== 1)
             {

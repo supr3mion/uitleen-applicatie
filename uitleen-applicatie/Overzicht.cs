@@ -43,7 +43,9 @@ namespace uitleen_applicatie
                     lblStatus.Text = "[" + dataReader["Status"] + "]";
                     lblDatumRetour.Text = "Datum Retour: " + dataReader["DatumRetour"];
                 }
+                
             }
+            connection.Close();
         }
 
         private void InitializeDatabaseConnection()
@@ -108,6 +110,9 @@ namespace uitleen_applicatie
                 cmd.ExecuteNonQuery();
 
             }
+            CloseConnection();
+
+            Close();
         }
     }
 }
