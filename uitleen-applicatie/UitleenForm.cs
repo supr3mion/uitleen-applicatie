@@ -118,7 +118,10 @@ namespace uitleen_applicatie
             {
                 MessageBox.Show("Opgeslagen");
             }
-            CloseConnection();
+
+            CloseConnection(); 
+            
+            Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
