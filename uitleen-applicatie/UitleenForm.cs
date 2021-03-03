@@ -23,6 +23,20 @@ namespace uitleen_applicatie
             InitializeDatabaseConnection();
 
             selectedId = id;
+
+            string sqlQuery = "SELECT * FROM apparaten WHERE ID = " + selectedId;
+
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(sqlQuery, connection);
+
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                if (dataReader.Read())
+                {
+                    tbCommentaar.Text = dataReader["Commetaar"] + "";
+                }
+            }
         }
 
          private void InitializeDatabaseConnection()
@@ -61,46 +75,7 @@ namespace uitleen_applicatie
                 return false;
             }
         }
-         public List<string>[] GetAllDevices()
-        {
-            string sqlQuery = "SELECT * FROM apparaten WHERE ID = " + selectedId;
-
-            List<string>[] resultList = new List<string>[6];
-            resultList[0] = new List<string>();
-            resultList[1] = new List<string>();
-            resultList[2] = new List<string>();
-            resultList[3] = new List<string>();
-            resultList[4] = new List<string>();
-            resultList[5] = new List<string>();
-
-            if (this.OpenConnection() == true)
-            {
-
-                MySqlCommand cmd = new MySqlCommand(sqlQuery, connection);
-
-                MySqlDataReader dataReader = cmd.ExecuteReader();
-
-                while (dataReader.Read())
-                {
-                    resultList[0].Add(dataReader["Naam"] + "");
-                    resultList[1].Add(dataReader["SerieNummer"] + "");
-                    resultList[2].Add(dataReader["Beschrijving"] + "");
-                    resultList[3].Add(dataReader["Status"] + "");
-                    resultList[4].Add(dataReader["DatumRetour"] + "");
-                }
-
-
-                dataReader.Close();
-
-                //this.CloseConnection();
-
-                return resultList;
-            }
-            else
-            {
-                return resultList;
-            }
-        }
+         
 
         public void UpdateDevice()
         {

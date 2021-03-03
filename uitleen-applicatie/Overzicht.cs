@@ -41,6 +41,7 @@ namespace uitleen_applicatie
                     lblBeschrijving.Text = dataReader["Beschrijving"] + "";
                     lblCommentaar.Text = dataReader["commetaar"] + "";
                     lblStatus.Text = "[" + dataReader["Status"] + "]";
+                    lblDatumRetour.Text = "Datum Retour: " + dataReader["DatumRetour"];
                 }
             }
         }
