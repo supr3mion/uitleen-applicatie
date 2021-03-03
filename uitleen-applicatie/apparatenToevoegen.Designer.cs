@@ -43,48 +43,49 @@ namespace uitleen_applicatie
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(531, 147);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(266, 76);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 25);
+            this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "apparatuur :";
             // 
             // txbNaam
             // 
-            this.txbNaam.Location = new System.Drawing.Point(536, 185);
-            this.txbNaam.Margin = new System.Windows.Forms.Padding(4);
+            this.txbNaam.Location = new System.Drawing.Point(268, 96);
+            this.txbNaam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbNaam.Multiline = true;
             this.txbNaam.Name = "txbNaam";
-            this.txbNaam.Size = new System.Drawing.Size(214, 33);
+            this.txbNaam.Size = new System.Drawing.Size(109, 19);
             this.txbNaam.TabIndex = 1;
             this.txbNaam.Text = "    naam apparatuur:\r\n\r\n\r\n";
             // 
             // txbSerieNummer
             // 
-            this.txbSerieNummer.Location = new System.Drawing.Point(536, 238);
-            this.txbSerieNummer.Margin = new System.Windows.Forms.Padding(4);
+            this.txbSerieNummer.Location = new System.Drawing.Point(268, 124);
+            this.txbSerieNummer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbSerieNummer.Multiline = true;
             this.txbSerieNummer.Name = "txbSerieNummer";
-            this.txbSerieNummer.Size = new System.Drawing.Size(214, 33);
+            this.txbSerieNummer.Size = new System.Drawing.Size(109, 19);
             this.txbSerieNummer.TabIndex = 2;
             this.txbSerieNummer.Text = "      serie nummer:\r\n\r\n\r\n";
             // 
             // txbBeschrijving
             // 
-            this.txbBeschrijving.Location = new System.Drawing.Point(536, 297);
-            this.txbBeschrijving.Margin = new System.Windows.Forms.Padding(4);
+            this.txbBeschrijving.Location = new System.Drawing.Point(268, 154);
+            this.txbBeschrijving.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbBeschrijving.Multiline = true;
             this.txbBeschrijving.Name = "txbBeschrijving";
-            this.txbBeschrijving.Size = new System.Drawing.Size(214, 33);
+            this.txbBeschrijving.Size = new System.Drawing.Size(109, 19);
             this.txbBeschrijving.TabIndex = 3;
             this.txbBeschrijving.Text = "       beschrijving:";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(536, 704);
+            this.button1.Location = new System.Drawing.Point(268, 366);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(214, 64);
+            this.button1.Size = new System.Drawing.Size(107, 33);
             this.button1.TabIndex = 4;
             this.button1.Text = "annuleren";
             this.button1.UseVisualStyleBackColor = true;
@@ -92,9 +93,10 @@ namespace uitleen_applicatie
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(815, 704);
+            this.button2.Location = new System.Drawing.Point(408, 366);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(214, 64);
+            this.button2.Size = new System.Drawing.Size(107, 33);
             this.button2.TabIndex = 5;
             this.button2.Text = "opslaan";
             this.button2.UseVisualStyleBackColor = true;
@@ -103,8 +105,10 @@ namespace uitleen_applicatie
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(450, 362);
+            this.pictureBox1.Location = new System.Drawing.Point(268, 191);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(372, 208);
+            this.pictureBox1.Size = new System.Drawing.Size(186, 108);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -112,9 +116,10 @@ namespace uitleen_applicatie
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(536, 596);
+            this.button3.Location = new System.Drawing.Point(268, 310);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(237, 49);
+            this.button3.Size = new System.Drawing.Size(118, 25);
             this.button3.TabIndex = 7;
             this.button3.Text = "kies afbeelding ";
             this.button3.UseVisualStyleBackColor = true;
@@ -122,10 +127,10 @@ namespace uitleen_applicatie
             // 
             // apparatenToevoegen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(1600, 865);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
@@ -134,7 +139,7 @@ namespace uitleen_applicatie
             this.Controls.Add(this.txbSerieNummer);
             this.Controls.Add(this.txbNaam);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "apparatenToevoegen";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
