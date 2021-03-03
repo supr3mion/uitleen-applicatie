@@ -105,10 +105,24 @@ namespace uitleen_applicatie
         public void UpdateDevice()
         {
 
+            string LeerlingNummer = tbLeerlingnummer.Text;
+            string NaamLeerling = tbNaam.Text;
+            string datum = tbDatum.Text;
             string commentaar = tbCommentaar.Text;
 
+
             // maken van een UPDATE sql om gegevens te wijzigen.
-            string sqlUpdateQuery = "UPDATE apparaten SET Commentaar = '" + commentaar + "' Where id = " + selectedId;
+            //string sqlUpdateQuery = "UPDATE apparaten SET LeerlingNummer  = '" + leerlingnummer + "';
+            //string sqlUpdateQuery = "UPDATE apparaten SET NaamLeerling = '" + naam + "' Where id = " + selectedId;
+            //string sqlUpdateQuery = "UPDATE apparaten SET DatumRetour = '" + datum + "' Where id = " + selectedId;
+            //string sqlUpdateQuery = "UPDATE apparaten SET Commentaar = '" + commentaar + "' Where id = " + selectedId;
+
+            //UPDATE apparaten SET NaamLeerling = " + LeerlingNummer + ", LeerlingNaam = " + NaamLeerling + ", DatumRetour = " + datum + ", Commetaar = " + commentaar + ", Status = uitgeleend WHERE ID = " + id + ";
+
+
+            string sqlUpdateQuery = "UPDATE apparaten SET NaamLeerling = " + LeerlingNummer + ", LeerlingNaam = " + NaamLeerling + ", DatumRetour = " + datum + ", Commetaar = " + commentaar + 
+                ", Status = uitgeleend WHERE ID = " + selectedId + "";
+
 
             // UPDATE tabelnaam
             // SET Kolomnaam = waarde
@@ -123,9 +137,6 @@ namespace uitleen_applicatie
 
                 MySqlDataReader dataReader = cmd.ExecuteReader();
 
-                
-
-                
                 //this.CloseConnection();
 
                 
