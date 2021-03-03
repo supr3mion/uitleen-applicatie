@@ -32,17 +32,17 @@ namespace uitleen_applicatie
             this.tbLeerlingnummer = new System.Windows.Forms.TextBox();
             this.Textlbl = new System.Windows.Forms.Label();
             this.tbNaam = new System.Windows.Forms.TextBox();
-            this.tbDatum = new System.Windows.Forms.TextBox();
             this.tbCommentaar = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.dtpDatumRetour = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // tbLeerlingnummer
             // 
             this.tbLeerlingnummer.AccessibleName = "tbLeerlingnummer";
             this.tbLeerlingnummer.Location = new System.Drawing.Point(319, 86);
-            this.tbLeerlingnummer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLeerlingnummer.Margin = new System.Windows.Forms.Padding(2);
             this.tbLeerlingnummer.Name = "tbLeerlingnummer";
             this.tbLeerlingnummer.Size = new System.Drawing.Size(100, 20);
             this.tbLeerlingnummer.TabIndex = 2;
@@ -60,20 +60,11 @@ namespace uitleen_applicatie
             // tbNaam
             // 
             this.tbNaam.Location = new System.Drawing.Point(319, 110);
-            this.tbNaam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbNaam.Margin = new System.Windows.Forms.Padding(2);
             this.tbNaam.Name = "tbNaam";
             this.tbNaam.Size = new System.Drawing.Size(100, 20);
             this.tbNaam.TabIndex = 4;
             this.tbNaam.Text = "    Naam Leerling:";
-            // 
-            // tbDatum
-            // 
-            this.tbDatum.Location = new System.Drawing.Point(319, 134);
-            this.tbDatum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tbDatum.Name = "tbDatum";
-            this.tbDatum.Size = new System.Drawing.Size(100, 20);
-            this.tbDatum.TabIndex = 5;
-            this.tbDatum.Text = " Datum van Retour:";
             // 
             // tbCommentaar
             // 
@@ -107,20 +98,27 @@ namespace uitleen_applicatie
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // dtpDatumRetour
+            // 
+            this.dtpDatumRetour.Location = new System.Drawing.Point(273, 135);
+            this.dtpDatumRetour.Name = "dtpDatumRetour";
+            this.dtpDatumRetour.Size = new System.Drawing.Size(191, 20);
+            this.dtpDatumRetour.TabIndex = 9;
+            // 
             // UitleenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dtpDatumRetour);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tbCommentaar);
-            this.Controls.Add(this.tbDatum);
             this.Controls.Add(this.tbNaam);
             this.Controls.Add(this.Textlbl);
             this.Controls.Add(this.tbLeerlingnummer);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UitleenForm";
             this.Text = "UitleenForm";
             this.ResumeLayout(false);
@@ -133,9 +131,9 @@ namespace uitleen_applicatie
         private System.Windows.Forms.TextBox tbLeerlingnummer;
         private System.Windows.Forms.Label Textlbl;
         private System.Windows.Forms.TextBox tbNaam;
-        private System.Windows.Forms.TextBox tbDatum;
         private System.Windows.Forms.TextBox tbCommentaar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DateTimePicker dtpDatumRetour;
     }
 }

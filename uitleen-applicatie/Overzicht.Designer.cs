@@ -41,6 +41,7 @@ namespace uitleen_applicatie
             this.lblSerieNummer = new System.Windows.Forms.Label();
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.lblNaamApparaat = new System.Windows.Forms.Label();
+            this.lblDatumRetour = new System.Windows.Forms.Label();
             this.mainPannel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
@@ -48,6 +49,7 @@ namespace uitleen_applicatie
             // mainPannel
             // 
             this.mainPannel.BackColor = System.Drawing.Color.White;
+            this.mainPannel.Controls.Add(this.lblDatumRetour);
             this.mainPannel.Controls.Add(this.btnVerwijder);
             this.mainPannel.Controls.Add(this.lblStatusTag);
             this.mainPannel.Controls.Add(this.lblStatus);
@@ -188,6 +190,18 @@ namespace uitleen_applicatie
             this.lblNaamApparaat.TabIndex = 0;
             this.lblNaamApparaat.Text = "[naam]";
             // 
+            // lblDatumRetour
+            // 
+            this.lblDatumRetour.BackColor = System.Drawing.Color.Transparent;
+            this.lblDatumRetour.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatumRetour.Location = new System.Drawing.Point(363, 208);
+            this.lblDatumRetour.Name = "lblDatumRetour";
+            this.lblDatumRetour.Size = new System.Drawing.Size(150, 19);
+            this.lblDatumRetour.TabIndex = 10;
+            this.lblDatumRetour.Tag = "";
+            this.lblDatumRetour.Text = "[datum retour]";
+            this.lblDatumRetour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Overzicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -217,5 +231,6 @@ namespace uitleen_applicatie
         private System.Windows.Forms.Label lblCommentaar;
         private System.Windows.Forms.Label lblSerieNummerTag;
         private System.Windows.Forms.Label lblSerieNummer;
+        private System.Windows.Forms.Label lblDatumRetour;
     }
 }

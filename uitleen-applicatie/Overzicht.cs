@@ -41,8 +41,11 @@ namespace uitleen_applicatie
                     lblBeschrijving.Text = dataReader["Beschrijving"] + "";
                     lblCommentaar.Text = dataReader["commetaar"] + "";
                     lblStatus.Text = "[" + dataReader["Status"] + "]";
+                    lblDatumRetour.Text = "Datum Retour: " + dataReader["DatumRetour"];
                 }
+                
             }
+            connection.Close();
         }
 
         private void InitializeDatabaseConnection()
@@ -104,7 +107,12 @@ namespace uitleen_applicatie
 
                 MySqlCommand cmd = new MySqlCommand(sqlQuery, connection);
 
+                cmd.ExecuteNonQuery();
+
             }
+            CloseConnection();
+
+            Close();
         }
     }
 }
