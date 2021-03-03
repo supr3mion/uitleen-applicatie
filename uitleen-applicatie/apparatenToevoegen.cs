@@ -74,6 +74,15 @@ namespace uitleen_applicatie
 
 
         }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opf = new OpenFileDialog();
+            opf.Filter = "kies afbeelding(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";
+            if (opf.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = Image.FromFile(opf.FileName);
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
@@ -108,14 +117,6 @@ namespace uitleen_applicatie
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog opf = new OpenFileDialog();
-            opf.Filter = "kies afbeelding(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";
-            if (opf.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox1.Image = Image.FromFile(opf.FileName);
-            }
+        
         }
     }
-}
