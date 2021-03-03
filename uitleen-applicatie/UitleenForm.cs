@@ -110,7 +110,7 @@ namespace uitleen_applicatie
 
                 MySqlCommand cmd = new MySqlCommand(sqlUpdateQuery, connection);
 
-                MySqlDataReader dataReader = cmd.ExecuteReader();
+                cmd.ExecuteNonQuery();
 
                 //this.CloseConnection();
 
