@@ -47,7 +47,7 @@ namespace uitleen_applicatie
 
                     lblDatumRetour.Text = dateValue.ToString("dd-MM-yyyy");
 
-                    pbFoto.Image = Image.FromFile(@"D:\device-images\" + dataReader["SerieNummer"] + ".png");
+                    pbFoto.Image = Image.FromFile(@"C:\device-images\" + dataReader["SerieNummer"] + ".png");
                 }
                 
             }

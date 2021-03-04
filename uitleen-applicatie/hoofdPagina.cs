@@ -146,22 +146,34 @@ namespace uitleen_applicatie
         
         private void btnUitlenen_Click(object sender, EventArgs e)
         {
-            string selectedId = lvDevices.SelectedItems[0].SubItems[5].Text;
-            int id = Int32.Parse(selectedId);
+            try
+            {
+                string selectedId = lvDevices.SelectedItems[0].SubItems[5].Text;
+                int id = Int32.Parse(selectedId);
 
 
-            UitleenForm myUitleenForm = new UitleenForm(id);
-            myUitleenForm.ShowDialog();
+                UitleenForm myUitleenForm = new UitleenForm(id);
+                myUitleenForm.ShowDialog();
+            }catch(Exception ex)
+            {
+                MessageBox.Show("selecteer een apparaat" + "\r\n" + ex.Message);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string selectedId = lvDevices.SelectedItems[0].SubItems[5].Text;
-            int id = Int32.Parse(selectedId);
+            try
+            {
+                string selectedId = lvDevices.SelectedItems[0].SubItems[5].Text;
+                int id = Int32.Parse(selectedId);
 
 
-            Overzicht myOverzicht = new Overzicht(id);
-            myOverzicht.ShowDialog();
+                Overzicht myOverzicht = new Overzicht(id);
+                myOverzicht.ShowDialog();
+            } catch (Exception ex)
+            {
+                MessageBox.Show("selecteer een apparaat" + "\r\n" + ex.Message);
+            }
         }
 
         private void btnAdd_Click_1(object sender, EventArgs e)
