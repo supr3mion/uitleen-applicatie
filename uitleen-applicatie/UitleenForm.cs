@@ -98,7 +98,7 @@ namespace uitleen_applicatie
             
 
             string insertquery = "UPDATE apparaten SET NaamLeerling = @NaamLeerling, LeerlingNummer = @LeerlingNummer, " +
-                "DatumRetour = @DatumRetour, Commetaar = @commetaar, Status = uitgeleend WHERE ID = " + selectedId + "";
+                "DatumRetour = @DatumRetour, Commetaar = @commetaar, Status = 'uitgeleend' WHERE ID = " + selectedId + "";
 
             connection.Open();
 
