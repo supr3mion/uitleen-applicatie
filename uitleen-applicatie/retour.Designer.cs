@@ -33,16 +33,17 @@ namespace uitleen_applicatie
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbCommentaar
             // 
-            this.tbCommentaar.Location = new System.Drawing.Point(257, 93);
+            this.tbCommentaar.Location = new System.Drawing.Point(257, 105);
             this.tbCommentaar.Multiline = true;
             this.tbCommentaar.Name = "tbCommentaar";
             this.tbCommentaar.Size = new System.Drawing.Size(246, 157);
             this.tbCommentaar.TabIndex = 7;
-            this.tbCommentaar.Text = "                             Commetaar:";
+            this.tbCommentaar.Text = "              ";
             // 
             // button2
             // 
@@ -73,12 +74,22 @@ namespace uitleen_applicatie
             this.label1.TabIndex = 11;
             this.label1.Text = "Retourneren";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(342, 89);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Commetaar:";
+            // 
             // retour
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
@@ -96,5 +107,6 @@ namespace uitleen_applicatie
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
