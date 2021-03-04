@@ -107,14 +107,29 @@ namespace uitleen_applicatie
             string imgPath2 = @"C:\device-images";
 
 
-            if (!Directory.Exists(imgPath))
+            if (!Directory.Exists(imgPath1) || !Directory.Exists(imgPath2))
             {
-                Directory.CreateDirectory(imgPath);
-                File.Copy(lblTest.Text, @"D:\device-images\" + Int32.Parse(txbSerieNummer.Text) + ".png");
+                try
+                {
+                    Directory.CreateDirectory(imgPath1);
+                    File.Copy(lblTest.Text, @"D:\device-images\" + Int32.Parse(txbSerieNummer.Text) + ".png");
+                }
+                catch (Exception ex)
+                {
+                    Directory.CreateDirectory(imgPath2);
+                    File.Copy(lblTest.Text, @"C:\device-images\" + Int32.Parse(txbSerieNummer.Text) + ".png");
+                }
             }
             else
             {
-                File.Copy(lblTest.Text, @"D:\device-images\" + Int32.Parse(txbSerieNummer.Text) + ".png");
+                try
+                {
+                    File.Copy(lblTest.Text, @"D:\device-images\" + Int32.Parse(txbSerieNummer.Text) + ".png");
+                }
+                catch (Exception ex)
+                {
+                    File.Copy(lblTest.Text, @"C:\device-images\" + Int32.Parse(txbSerieNummer.Text) + ".png");
+                }
 
             }
 
