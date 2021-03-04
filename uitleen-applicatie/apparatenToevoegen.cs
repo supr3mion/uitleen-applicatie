@@ -103,17 +103,17 @@ namespace uitleen_applicatie
             cmd.Parameters["@DatumRetour"].Value = DateTime.Now;
             cmd.Parameters["@FotoID"].Value = Int32.Parse(txbSerieNummer.Text);
 
-            string imgPath = @"D:\device-images";
+            string imgPath = @"C:\device-images";
 
 
             if (!Directory.Exists(imgPath))
             {
                 Directory.CreateDirectory(imgPath);
-                File.Copy(lblTest.Text, @"D:\device-images\" + Int32.Parse(txbSerieNummer.Text) + ".png");
+                File.Copy(lblTest.Text, @"C:\device-images\" + Int32.Parse(txbSerieNummer.Text) + ".png");
             }
             else
             {
-                File.Copy(lblTest.Text, @"D:\device-images\" + Int32.Parse(txbSerieNummer.Text) + ".png");
+                File.Copy(lblTest.Text, @"C:\device-images\" + Int32.Parse(txbSerieNummer.Text) + ".png");
 
             }
 
