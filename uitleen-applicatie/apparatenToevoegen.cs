@@ -75,12 +75,12 @@ namespace uitleen_applicatie
 
 
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             string insertquery = "INSERT INTO friesepoort.apparaten(Naam, SerieNummer, Beschrijving, DatumRetour, Status, Foto) " +
                 "VALUES(@Naam, @SerieNummer, @Beschrijving, @DatumRetour, 'beschikbaar', @FotoID)";
@@ -114,7 +114,7 @@ namespace uitleen_applicatie
                     Directory.CreateDirectory(imgPath1);
                     File.Copy(lblTest.Text, @"D:\device-images\" + Int32.Parse(txbSerieNummer.Text) + ".png");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     Directory.CreateDirectory(imgPath2);
                     File.Copy(lblTest.Text, @"C:\device-images\" + Int32.Parse(txbSerieNummer.Text) + ".png");
@@ -126,7 +126,7 @@ namespace uitleen_applicatie
                 {
                     File.Copy(lblTest.Text, @"D:\device-images\" + Int32.Parse(txbSerieNummer.Text) + ".png");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     File.Copy(lblTest.Text, @"C:\device-images\" + Int32.Parse(txbSerieNummer.Text) + ".png");
                 }
@@ -141,12 +141,7 @@ namespace uitleen_applicatie
             Close();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public void button3_Click(object sender, EventArgs e)
+        public void btnImage_Click(object sender, EventArgs e)
         {
             OpenFileDialog opf = new OpenFileDialog();
             opf.Filter = "kies afbeelding(*.jpg; *.png;)|*.jpg; *.png;";
@@ -156,7 +151,6 @@ namespace uitleen_applicatie
                 lblTest.Text = opf.FileName;
             }
         }
-
 
     }
 }

@@ -37,8 +37,8 @@ namespace uitleen_applicatie
             this.DatumRetour = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnReload = new System.Windows.Forms.Button();
-            this.btnUitlenen = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnUitlenenEnRetour = new System.Windows.Forms.Button();
+            this.btnDetail = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lvDevices
@@ -51,10 +51,9 @@ namespace uitleen_applicatie
             this.DatumRetour});
             this.lvDevices.FullRowSelect = true;
             this.lvDevices.HideSelection = false;
-            this.lvDevices.Location = new System.Drawing.Point(24, 23);
-            this.lvDevices.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lvDevices.Location = new System.Drawing.Point(12, 12);
             this.lvDevices.Name = "lvDevices";
-            this.lvDevices.Size = new System.Drawing.Size(1548, 710);
+            this.lvDevices.Size = new System.Drawing.Size(776, 371);
             this.lvDevices.TabIndex = 0;
             this.lvDevices.UseCompatibleStateImageBehavior = false;
             this.lvDevices.View = System.Windows.Forms.View.Details;
@@ -87,10 +86,9 @@ namespace uitleen_applicatie
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(1216, 771);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnAdd.Location = new System.Drawing.Point(608, 401);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(360, 71);
+            this.btnAdd.Size = new System.Drawing.Size(180, 37);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "+ Toevoegen";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -99,51 +97,47 @@ namespace uitleen_applicatie
             // btnReload
             // 
             this.btnReload.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReload.Location = new System.Drawing.Point(24, 771);
-            this.btnReload.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnReload.Location = new System.Drawing.Point(12, 401);
             this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(360, 71);
+            this.btnReload.Size = new System.Drawing.Size(180, 37);
             this.btnReload.TabIndex = 2;
             this.btnReload.Text = "Herladen";
             this.btnReload.UseVisualStyleBackColor = true;
             this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
-            // btnUitlenen
+            // btnUitlenenEnRetour
             // 
-            this.btnUitlenen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUitlenen.Location = new System.Drawing.Point(972, 771);
-            this.btnUitlenen.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.btnUitlenen.Name = "btnUitlenen";
-            this.btnUitlenen.Size = new System.Drawing.Size(200, 71);
-            this.btnUitlenen.TabIndex = 3;
-            this.btnUitlenen.Text = "Uitlenen";
-            this.btnUitlenen.UseVisualStyleBackColor = true;
-            this.btnUitlenen.Click += new System.EventHandler(this.btnUitlenen_Click);
+            this.btnUitlenenEnRetour.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUitlenenEnRetour.Location = new System.Drawing.Point(342, 401);
+            this.btnUitlenenEnRetour.Name = "btnUitlenenEnRetour";
+            this.btnUitlenenEnRetour.Size = new System.Drawing.Size(260, 37);
+            this.btnUitlenenEnRetour.TabIndex = 3;
+            this.btnUitlenenEnRetour.Text = "Uitlenen of Retourneren";
+            this.btnUitlenenEnRetour.UseVisualStyleBackColor = true;
+            this.btnUitlenenEnRetour.Click += new System.EventHandler(this.btnUitlenenEnRetour_Click);
             // 
-            // button1
+            // btnDetail
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(650, 771);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(276, 71);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "meer details";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetail.Location = new System.Drawing.Point(198, 401);
+            this.btnDetail.Name = "btnDetail";
+            this.btnDetail.Size = new System.Drawing.Size(138, 37);
+            this.btnDetail.TabIndex = 4;
+            this.btnDetail.Text = "meer details";
+            this.btnDetail.UseVisualStyleBackColor = true;
+            this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
             // 
             // hoofdPagina
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(1600, 865);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnUitlenen);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDetail);
+            this.Controls.Add(this.btnUitlenenEnRetour);
             this.Controls.Add(this.btnReload);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lvDevices);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "hoofdPagina";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -160,8 +154,8 @@ namespace uitleen_applicatie
         private System.Windows.Forms.ColumnHeader DatumRetour;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnReload;
-        private System.Windows.Forms.Button btnUitlenen;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnUitlenenEnRetour;
+        private System.Windows.Forms.Button btnDetail;
     }
 }
 

@@ -30,14 +30,15 @@ namespace uitleen_applicatie
         private void InitializeComponent()
         {
             this.tbCommentaar = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRetour = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbCommentaar
             // 
+            this.tbCommentaar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCommentaar.Location = new System.Drawing.Point(257, 105);
             this.tbCommentaar.Multiline = true;
             this.tbCommentaar.Name = "tbCommentaar";
@@ -45,25 +46,27 @@ namespace uitleen_applicatie
             this.tbCommentaar.TabIndex = 7;
             this.tbCommentaar.Text = "              ";
             // 
-            // button2
+            // btnRetour
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(257, 285);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 35);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Opslaan";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnRetour.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRetour.Location = new System.Drawing.Point(415, 287);
+            this.btnRetour.Name = "btnRetour";
+            this.btnRetour.Size = new System.Drawing.Size(88, 35);
+            this.btnRetour.TabIndex = 9;
+            this.btnRetour.Text = "Retourneer";
+            this.btnRetour.UseVisualStyleBackColor = false;
+            this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
             // 
-            // button1
+            // btnCancel
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(415, 285);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 35);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Sluiten";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnCancel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCancel.Location = new System.Drawing.Point(257, 287);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(88, 35);
+            this.btnCancel.TabIndex = 10;
+            this.btnCancel.Text = "annuleren";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label1
             // 
@@ -91,11 +94,11 @@ namespace uitleen_applicatie
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.tbCommentaar);
             this.Name = "retour";
-            this.Text = "retour";
+            this.Text = "8";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,8 +107,8 @@ namespace uitleen_applicatie
         #endregion
 
         private System.Windows.Forms.TextBox tbCommentaar;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRetour;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }

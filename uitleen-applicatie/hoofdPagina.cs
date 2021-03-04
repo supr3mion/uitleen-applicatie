@@ -138,39 +138,59 @@ namespace uitleen_applicatie
                 lvDevices.Items.Add(newDeviceItem);
             }
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
         
-        private void btnUitlenen_Click(object sender, EventArgs e)
+        private void btnUitlenenEnRetour_Click(object sender, EventArgs e)
         {
             try
             {
                 string selectedId = lvDevices.SelectedItems[0].SubItems[5].Text;
                 int id = Int32.Parse(selectedId);
 
+                string sqlQuery = "SELECT * FROM apparaten WHERE ID = " + id;
 
-                UitleenForm myUitleenForm = new UitleenForm(id);
-                myUitleenForm.ShowDialog();
+                if (this.OpenConnection() == true)
+                {
+                    MySqlCommand cmd = new MySqlCommand(sqlQuery, connection);
+
+                    MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                    if (dataReader.Read())
+                    {
+                        string status = dataReader["Status"] + "";
+
+                        if (status == "beschikbaar")
+                        {
+                            UitleenForm myUitleenForm = new UitleenForm(id);
+                            myUitleenForm.ShowDialog();
+                        }
+                        else
+                        {
+                            retour myRetourForm = new retour(id);
+                            myRetourForm.ShowDialog();
+                        }
+                    }
+
+                }
+                connection.Close();
+
             }catch(Exception ex)
             {
                 MessageBox.Show("selecteer een apparaat" + "\r\n" + ex.Message);
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnDetail_Click(object sender, EventArgs e)
         {
             try
             {
+
                 string selectedId = lvDevices.SelectedItems[0].SubItems[5].Text;
                 int id = Int32.Parse(selectedId);
 
-
                 Overzicht myOverzicht = new Overzicht(id);
                 myOverzicht.ShowDialog();
-            } catch (Exception ex)
+            } 
+            catch (Exception ex)
             {
                 MessageBox.Show("selecteer een apparaat" + "\r\n" + ex.Message);
             }
