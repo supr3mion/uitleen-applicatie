@@ -98,6 +98,7 @@ namespace uitleen_applicatie
             this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.tbCommentaar);
             this.Name = "retour";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "8";
             this.ResumeLayout(false);
             this.PerformLayout();

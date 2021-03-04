@@ -40,8 +40,8 @@ namespace uitleen_applicatie
             this.lblCommentaar = new System.Windows.Forms.Label();
             this.lblSerieNummerTag = new System.Windows.Forms.Label();
             this.lblSerieNummer = new System.Windows.Forms.Label();
-            this.lblNaamApparaat = new System.Windows.Forms.Label();
             this.pbFoto = new System.Windows.Forms.PictureBox();
+            this.lblNaamApparaat = new System.Windows.Forms.Label();
             this.mainPannel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
@@ -179,6 +179,15 @@ namespace uitleen_applicatie
             this.lblSerieNummer.Tag = "";
             this.lblSerieNummer.Text = "[serie nummer]";
             // 
+            // pbFoto
+            // 
+            this.pbFoto.Location = new System.Drawing.Point(363, 3);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(250, 250);
+            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbFoto.TabIndex = 1;
+            this.pbFoto.TabStop = false;
+            // 
             // lblNaamApparaat
             // 
             this.lblNaamApparaat.BackColor = System.Drawing.Color.Transparent;
@@ -189,15 +198,6 @@ namespace uitleen_applicatie
             this.lblNaamApparaat.TabIndex = 0;
             this.lblNaamApparaat.Text = "[naam]";
             // 
-            // pbFoto
-            // 
-            this.pbFoto.Location = new System.Drawing.Point(363, 3);
-            this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(250, 250);
-            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbFoto.TabIndex = 1;
-            this.pbFoto.TabStop = false;
-            // 
             // Overzicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,6 +206,7 @@ namespace uitleen_applicatie
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.mainPannel);
             this.Name = "Overzicht";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "overzicht";
             this.mainPannel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();

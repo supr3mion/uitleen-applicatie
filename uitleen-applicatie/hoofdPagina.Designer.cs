@@ -139,6 +139,7 @@ namespace uitleen_applicatie
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lvDevices);
             this.Name = "hoofdPagina";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
 
